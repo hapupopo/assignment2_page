@@ -1,7 +1,6 @@
 from flask import Flask, render_template
 
 app = Flask(__name__)
-server = app.server
 
 @app.route("/")
 def home():
@@ -11,5 +10,5 @@ def home():
 def detail():
     return render_template('portfolio_details.html')
 
-if __name__ == '__main__':
-    app.run()
+if __name__ == "__main__":
+    app.run(host='127.0.0.1', port=5000, debug=True)
